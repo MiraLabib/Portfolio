@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    display: grid;
+   
+    grid-template-rows: auto;
+    box-sizing: border-box;
+    max-width: 1280px;
+    min-width: 360px;
+    margin: auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    grid-gap: 30px;
+}
+
+div.logo,
+nav {
+    margin-top: 20px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    list-style: none;
+    gap: 16px;
+    align-items: end;
+}
+
+header,
+footer {
+    grid-column: span 4;
+}
+
+
+.menu {
+    color: darkred;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster', cursive;
+    color: darkred;
+}
+
+/* ----- */
+
+
+h1 {
+    position: relative;
+    top: 45%;
+    text-align: center;
+    font-size: 4em;
+
+}
+
+.img_easter {
+    height: 450px;
+    width: 100%;
+}
+
+
+header {
+    grid-column: 1 / span 4;
+    background-image: url("../img/easter-background-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}
+
+
+main {
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+aside {
+    grid-column: 4;
+    grid-row: 3;
+    border: solid 1px #bbcedc;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px #a3adb5;
+    padding: 15px;
+    margin: 0 10px 0 0;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    background-color: rgb(127, 197, 240);
+    padding: 10px;
+}
+
+@media screen and (max-width: 770px) {
+    main {
+        grid-column: 1 / span 4;
+    }
+
+    article {
+        grid-column: 1 / span 2;
+    }
+
+    aside {
+        grid-row: 4;
+        grid-column: 1 / span 4;
+    }
+
+}

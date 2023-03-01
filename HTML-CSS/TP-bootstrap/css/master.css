@@ -1,0 +1,6 @@
+/* CUSTOM CSS */
+
+:root {
+    --bs-dark: red;
+    --bs-dark-rgb: 255,0,0;
+}

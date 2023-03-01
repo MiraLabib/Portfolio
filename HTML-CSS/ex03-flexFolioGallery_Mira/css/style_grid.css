@@ -1,0 +1,86 @@
+ body {
+    font-family: "Syne Mono", monospace;
+    margin: 0 auto;
+    background-color: rgb(91, 89, 89);
+} 
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: #fff;
+    width: 290px;
+    padding: 5px;
+    align-self: end;
+}
+
+.projet:hover h2 {
+    display: block;
+}
+
+.folio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.projet {
+    display: grid;
+    position: relative;
+    transition: 0.3s;
+    min-width: 200px;
+}
+
+.projet:hover {
+    transform: scale(1.25);
+    z-index: 1;
+}
+
+.projet img {
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-around;
+    min-width: 200px;
+}
+
+.lightbox {
+    display: grid;
+    background: rgba(0, 0, 0, 0.9);
+    /* top: 0;
+    left: 0; */
+    /* width: 100%;
+    height: 100%; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    z-index: 5;
+}
+
+.lightbox img {
+    min-width: 100%;
+    max-width: 100%;
+    transform: scale(0.70);
+    transition: transform .4s;
+}
+
+.lightbox:target {
+    display: grid;
+    outline: none;
+    visibility: visible;
+    cursor: default;
+    opacity: 1;
+    justify-content: space-around;
+}
+
+.lightbox:target img {
+    transform: scale(0.7);
+}
+
